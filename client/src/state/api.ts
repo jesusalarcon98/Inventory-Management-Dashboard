@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export interface Product {
   productId: string;
   name: string;
-  Price: number;
+  price: number;
   rating?: number;
   stockQuantity: number;
 }
@@ -45,7 +45,7 @@ export interface DashboardMetrics {
 }
 
 export const api = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.NODE_ENV }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
   tagTypes: ["DashboardMetrics"],
   endpoints: (build) => ({
