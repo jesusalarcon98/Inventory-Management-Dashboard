@@ -40,7 +40,6 @@ const CardSalesSummary = () => {
           {/* HEADER */}
           <div>
             <h2 className='text-lg font-semibold mb-2 px-7 pt-5'>Sales Summary
-
             </h2>
           </div>
           {/* BODY */}
@@ -99,7 +98,7 @@ const CardSalesSummary = () => {
             </div>
           </div>
           {/* FOOTER */}
-          <div className="flex flex-wrap justify-between items-center mt-6 text-sm px-7 mb-4">
+          <div className="flex flex-wrap justify-between items-center text-sm px-7 mb-4">
             <p>{salesData.length || 0} days</p>
             <p className="text-sm text-right">
               Highest Sales Date: <span className="font-bold">{highestValueDate}</span>
