@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import { populate } from "dotenv";
 
 const prisma = new PrismaClient();
 
@@ -41,10 +40,12 @@ export const getDashboardMetrics = async (
         },
       }
     );
-    const expenseByCategorySummary = expenseByCategorySummaryRaw.map((item) => ({
-      ...item,
-      amount: item.amount.toString,
-    }));
+    const expenseByCategorySummary = expenseByCategorySummaryRaw.map(
+      (item) => ({
+        ...item,
+        amount: item.amount.toString(),
+      })
+    );
 
     res.json({
       popularProducts,
@@ -52,7 +53,7 @@ export const getDashboardMetrics = async (
       purchaseSummary,
       expenseSummary,
       expenseByCategorySummary,
-    })
+    });
   } catch (error) {
     res.status(500).json({ message: "Error retrieving dashboard metrics" });
   }

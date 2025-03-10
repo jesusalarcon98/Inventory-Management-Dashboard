@@ -22,10 +22,11 @@ const CardPurchaseSummary = () => {
               <h2 className='text-lg font-semibold mb-2 px-7 pt-5'>
                 Purchase Summary
               </h2>
+              <hr />
             </div>
             {/* BODY*/}
             <div>
-              {/* BODY HEADER */}   
+              {/* BODY HEADER */}
               <div className='text-lg font-semibold mb-2 px-7'>
                 <p className='text-xs text-gray-400'>Purchased</p>
                 <div className='flex items-center'>
