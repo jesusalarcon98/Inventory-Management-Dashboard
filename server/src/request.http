@@ -1,1 +1,4 @@
+
+GET http://localhost:8000/products HTTP/1.1
+############
 GET http://localhost:8000/dashboard HTTP/1.1
