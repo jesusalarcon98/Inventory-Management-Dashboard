@@ -43,11 +43,9 @@ const inventory = () => {
           color: "black",
         },
         "& .MuiCheckbox-root": {
-          color: "rgb(55, 65, 81) !important", // Equivalente a `!text-gray-700`
+          color: "rgb(55, 65, 81) !important",
         },
-       /*  "& .Mui-checked": {
-          color: "rgb(55, 65, 81) !important", // Color del checkbox marcado
-        }, */
+
       }}
     />
   </div>
