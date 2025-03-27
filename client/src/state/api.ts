@@ -78,7 +78,7 @@ export const api = createApi({
 });
 
 export const {
+  useCreateProductMutation,
   useGetDashboardMetricsQuery,
   useGetProductsQuery,
-  useCreateProductMutation,
 } = api;
