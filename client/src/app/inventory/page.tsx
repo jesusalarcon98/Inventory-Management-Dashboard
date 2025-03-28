@@ -13,7 +13,7 @@ const columns: GridColDef[] = [
 
 ]
 
-const inventory = () => {
+const Inventory = () => {
   const { data: products, isError, isLoading } = useGetProductsQuery();
 
   if (isLoading) {
@@ -51,4 +51,4 @@ const inventory = () => {
   </div>
 }
 
-export default inventory
+export default Inventory
