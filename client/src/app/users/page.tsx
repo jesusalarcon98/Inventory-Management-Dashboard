@@ -34,7 +34,6 @@ const Users = () => {
       checkboxSelection
       className="bg-white shadow rounded-lg border border-gray-200 mt-5 !text-gray-700"
       sx={{
-
         "& .MuiDataGrid-columnHeaders": {
           backgroundColor: "red",
           color: "black",
@@ -42,7 +41,6 @@ const Users = () => {
         "& .MuiCheckbox-root": {
           color: "rgb(55, 65, 81) !important",
         },
-
       }}
     />
   </div>

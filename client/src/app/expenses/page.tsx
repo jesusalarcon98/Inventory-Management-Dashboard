@@ -3,7 +3,7 @@
 import { ExpenseByCategorySummary, useGetExpensesByCategoryQuery } from "@/state/api";
 import { useMemo, useState } from "react";
 import Header from "@/app/(components)/Header";
-import { Pie, ResponsiveContainer } from "recharts";
+import { Cell, Legend, Pie, ResponsiveContainer, Tooltip } from "recharts";
 import { PieChart } from "recharts";
 
 const Expenses = () => {
@@ -91,6 +91,7 @@ const Expenses = () => {
                 name="category"
                 id="category"
                 className={classNames.selectInput}
+                style={{ color: "rgb(55, 65, 81)" }} 
                 defaultValue="all"
                 onChange={(e) => setSelectedCategory(e.target.value)}>
                 <option>All</option>
@@ -109,6 +110,7 @@ const Expenses = () => {
                 id="start-date"
                 name="start-date"
                 className={classNames.selectInput}
+                style={{ color: "rgb(55, 65, 81)" }} 
                 onChange={(e) => setStartDate(e.target.value)}
               />
             </div>
@@ -122,6 +124,7 @@ const Expenses = () => {
                 id="end-date"
                 name="end-date"
                 className={classNames.selectInput}
+                style={{ color: "rgb(55, 65, 81)" }} 
                 onChange={(e) => setEndDate(e.target.value)}
               />
             </div>
@@ -140,7 +143,14 @@ const Expenses = () => {
                 fill="#8884d8"
                 dataKey="amount"
                 onMouseEnter={(_, index) => setActiveIndex(index)}
-              ></Pie>
+              >
+                {aggregatedData.map((entry: AggregatedDataItem, index: number) => (
+                  <Cell key={`cell-${index}`} fill={index === activeIndex ? "rgb(29,78,216)" : entry.color} />
+                ))}
+              </Pie>
+              <Tooltip />
+              <Legend />
+
             </PieChart>
           </ResponsiveContainer>
         </div>
