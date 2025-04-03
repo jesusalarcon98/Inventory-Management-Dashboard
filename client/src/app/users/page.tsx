@@ -23,8 +23,8 @@ const Users = () => {
         Failed to fetch users
       </div>
     )
-
   }
+
   return <div className="flex flex-col">
     <Header name="Users" />
     <DataGrid
